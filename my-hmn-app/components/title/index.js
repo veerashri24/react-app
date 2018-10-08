@@ -17,14 +17,13 @@ const Title = () => (
         display: flex;
         justify-content: space-between;
         border-bottom : 1px solid #efefef;
+        color: #797A7E;
       }
       .title {
         margin: 0;
         width: 100%;
         line-height: 1.15;
         font-size: 16px;
-        background-color: #
-        font-color: #ffffff
       },
       .edit {
 	      padding-right: 7px;
