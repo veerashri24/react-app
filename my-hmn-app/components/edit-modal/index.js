@@ -1,23 +1,6 @@
 import React from 'react'
-import Modal from 'react-modal'
-import EditModalWrapper from '../edit-modal'
-import Input from '../input'
-import Buttons from '../buttons'
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    width: '300px',
-    height: '200px'
-  }
-}
-
-class Title extends React.Component {
+class EditModalWrapper extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -27,6 +10,7 @@ class Title extends React.Component {
     this.showModal = this.showModal.bind(this)
     this.hideModal = this.hideModal.bind(this)
   }
+
   showModal() {
     this.setState({ show: true })
   }
@@ -39,10 +23,10 @@ class Title extends React.Component {
     return (
       <div className="title-wrapper">
         <div className="title">
-          <span>Membership</span>
+          <span>Update Membership</span>
         </div>
-        <div className="edit" onClick={this.showModal}>
-          <span>Edit</span>
+        <div className="close" onClick={this.hideModal}>
+          <span>X</span>
         </div>
 
         <style jsx>{`
@@ -60,24 +44,15 @@ class Title extends React.Component {
             font-size: 16px;
           }
           ,
-          .edit {
+          .close {
             padding-right: 7px;
             right: 0;
             top: 0;
           }
         `}</style>
-        <Modal
-          isOpen={this.state.show}
-          handleClose={this.hideModal}
-          style={customStyles}
-        >
-          <EditModalWrapper />
-          <Input />
-          <Buttons />
-        </Modal>
       </div>
     )
   }
 }
 
-export default Title
+export default EditModalWrapper
