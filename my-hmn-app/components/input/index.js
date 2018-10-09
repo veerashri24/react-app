@@ -20,6 +20,7 @@ class Input extends React.Component {
       <div className="input-wrapper">
         <input
           type="text"
+          className="input-box"
           defaultValue={this.state.nickname}
           placeholder="Nickname"
           name="nickname"
@@ -28,6 +29,7 @@ class Input extends React.Component {
 
         <input
           type="text"
+          className="input-box"
           defaultValue={this.state.email}
           placeholder="Email"
           name="email"
@@ -42,17 +44,10 @@ class Input extends React.Component {
             justify-content: space-between;
             color: #797a7e;
           }
-          .title {
-            margin: 0;
-            width: 100%;
-            line-height: 1.15;
-            font-size: 16px;
-          }
-          ,
-          .close {
-            padding-right: 7px;
-            right: 0;
-            top: 0;
+          .input-box {
+            padding: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
           }
         `}</style>
       </div>

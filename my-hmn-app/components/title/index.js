@@ -13,7 +13,8 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     width: '300px',
-    height: '200px'
+    height: '300px',
+    padding: '0'
   }
 }
 
@@ -57,7 +58,8 @@ class Title extends React.Component {
             margin: 0;
             width: 100%;
             line-height: 1.15;
-            font-size: 16px;
+            font-size: 18px;
+            color: #6d6d6f;
           }
           ,
           .edit {

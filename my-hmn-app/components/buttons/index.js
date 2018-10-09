@@ -8,27 +8,31 @@ class Buttons extends React.Component {
   render() {
     return (
       <div className="buttons-wrapper">
-        <button onClick="">Update</button>
-        <button onClick="">Cancel</button>
+        <button className="button" type="submit" onClick="">
+          UPDATE
+        </button>
+        <button className="button" onClick="">
+          CANCEL
+        </button>
 
         <style jsx>{`
           .buttons-wrapper {
             bottom: 0;
             display: flex;
-            justify-content: space-between;
+            flex: 1;
+            padding: 0 20px 0 20px;
             bottom: 0;
           }
-          .title {
-            margin: 0;
-            width: 100%;
-            line-height: 1.15;
-            font-size: 16px;
+          .button {
+            padding: 10px;
+            font-size: 10px;
+            border-radius: 3px;
+            flex: 1;
+            margin-right: 10px;
           }
-          ,
-          .close {
-            padding-right: 7px;
-            right: 0;
-            top: 0;
+          .button[type='submit'] {
+            background-color: #fbbd09;
+            color: #472661;
           }
         `}</style>
       </div>
