@@ -3,12 +3,16 @@ import React from 'react'
 class Input extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      nickname: '',
+      email: ''
+    }
 
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
-    this.setState({ title: event.target.value })
+    this.setState({ nickname: event.target.value })
   }
 
   render() {
@@ -16,16 +20,17 @@ class Input extends React.Component {
       <div className="input-wrapper">
         <input
           type="text"
+          defaultValue={this.state.nickname}
           placeholder="Nickname"
           name="nickname"
-          value="Molly Smith"
           onChange={this.handleChange.bind(this)}
         />
+
         <input
           type="text"
+          defaultValue={this.state.email}
           placeholder="Email"
           name="email"
-          value="mollysmith@gmail.com"
           onChange={this.handleChange.bind(this)}
         />
 
